@@ -6,6 +6,6 @@ public interface PredateurAction {
 	public void chasser() ;
 	public void courrir  () ;
 	public void seReproduire () ;
-	public void emettreunSon() ;
+	public void emettreSon() ;
 	
 }

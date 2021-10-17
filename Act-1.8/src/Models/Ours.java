@@ -83,7 +83,7 @@ public class Ours  extends Prédateur implements OursAction {
 	}
 	
 	@Override
-	public void emettreunSon() {
+	public void emettreSon(int typeSon) {
 		// TODO Auto-generated method stub	
 	}
 
