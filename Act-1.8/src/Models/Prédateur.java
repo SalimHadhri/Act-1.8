@@ -1,5 +1,4 @@
 package Models;
-
 import Interfaces.GroupePredateurAction;
 
 public abstract class Prédateur implements GroupePredateurAction {
@@ -10,9 +9,19 @@ public abstract class Prédateur implements GroupePredateurAction {
 	private GroupeorSolitraire groupeorSolitraire;
 	private Nourriture nourriture ;
 	public enum GroupeorSolitraire {groupe ,solitaire };
-	
 	public enum Nourriture {viande,omnivore};
 	public enum Categorie {jeune , adulte, vieux };	
+	
+	public Prédateur() {
+	}
+	
+	public Prédateur(String sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,Nourriture nourriture) {
+		this.sexe = sexe;
+		this.categorie = categorie;
+		this.force = force;
+		this.groupeorSolitraire = groupeorSolitraire;
+		this.nourriture = nourriture;
+	}
 
 	public abstract void seNourrir();
 
@@ -21,39 +30,21 @@ public abstract class Prédateur implements GroupePredateurAction {
 	public abstract  void emettreunSon() ;
 	
 	public void courrir() {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
 
 	public void seReproduire() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public Prédateur() {
-	}
-	
-
-
-	public Prédateur(String sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,
-			Nourriture nourriture) {
-		this.sexe = sexe;
-		this.categorie = categorie;
-		this.force = force;
-		this.groupeorSolitraire = groupeorSolitraire;
-		this.nourriture = nourriture;
+		// TODO Auto-generated method stub	
 	}
 
 	public GroupeorSolitraire getGroupeorSolitraire() {
 		return groupeorSolitraire;
 	}
 
-
 	public void setGroupeorSolitraire(GroupeorSolitraire groupeorSolitraire) {
 		this.groupeorSolitraire = groupeorSolitraire;
 	}
 
-	
 	public String getSexe() {
 		return sexe;
 	}
@@ -91,5 +82,4 @@ public abstract class Prédateur implements GroupePredateurAction {
 				+ groupeorSolitraire + ", nourriture=" + nourriture + "]";
 	}
 		
-
 }

@@ -10,21 +10,14 @@ public abstract class GroupePredateur implements GroupePredateurAction{
 	private int taille ;
 	private String zoneGeographique ;	
 	
-	
-	
-	
-	
 	public GroupePredateur() {
 	}
 	
-
 	public GroupePredateur(List<Prédateur> groupePredateur, int taille, String zoneGeographique) {
 		this.groupePredateur = groupePredateur;
 		this.taille = taille;
 		this.zoneGeographique = zoneGeographique;
-	}
-	
-	
+	}	
 
 	public void afficherCaracteritiques () {
 		
@@ -32,29 +25,23 @@ public abstract class GroupePredateur implements GroupePredateurAction{
 	}
 	
 	public void afficherCaracteristiquesPredateurs () {
-
 		for (int i = 0; i < groupePredateur.size(); i++) {
 		      System.out.println(groupePredateur.get(i).toString());
-		    }
-		
+		}	
 	}
 	
-	public  void ajouterPredateur (Prédateur prePrédateur) {
-	
+	public  void ajouterPredateur (Prédateur prePrédateur) {	
 		groupePredateur.add(prePrédateur) ;
 	}
 	
-	public void enleverPredateur (Prédateur prePrédateur) {
-		
+	public void enleverPredateur (Prédateur prePrédateur) {		
 		for (int i = 0; i < groupePredateur.size(); i++) {
 		      if (! groupePredateur.get(i).equals(prePrédateur) )   {
 		    	  groupePredateur.remove(i) ;
 		    	  
 		      }
-		    }	
+		 }	
 	}
-	
-	
 
 	public List<Prédateur> getGroupePredateur() {
 		return groupePredateur;
@@ -80,15 +67,9 @@ public abstract class GroupePredateur implements GroupePredateurAction{
 		this.zoneGeographique = zoneGeographique;
 	}
 	
-	
 	@Override
 	public String toString() {
 		return "GroupePredateur [taille=" + taille + ", zoneGeographique=" + zoneGeographique + "]";
 	}
-	
-	
-	
-	
-	
 
 }
