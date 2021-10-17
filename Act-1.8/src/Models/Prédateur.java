@@ -27,7 +27,7 @@ public abstract class Prédateur implements GroupePredateurAction {
 
 	public abstract void chasser();
 
-	public abstract  void emettreunSon() ;
+	public abstract  void emettreSon(int typeSon) ;
 	
 	public void courrir() {
 		// TODO Auto-generated method stub	

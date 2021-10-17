@@ -28,7 +28,7 @@ public class Lion   extends Prédateur implements LionAction{
 		this.facteurImpetiosite = facteurImpetiosite;
 	}
 
-	public  void emettreunSon(int typeSon) {
+	public  void emettreSon(int typeSon) {
 		switch (typeSon) {
 		case 1:
 			System.out.println("Exprimer l’appartenance à un groupe") ;
@@ -88,11 +88,6 @@ public class Lion   extends Prédateur implements LionAction{
 	public void seReproduire() {
 		// TODO Auto-generated method stub	
 	}
-	
-	@Override
-	public void emettreunSon() {
-		// TODO Auto-generated method stub	
-	}
 
 	@Override
 	public void afficherCaracteritiques() {
@@ -141,7 +136,7 @@ public class Lion   extends Prédateur implements LionAction{
 	@Override
 	public String toString() {
 		return "Lion [facteurDomination=" + facteurDomination + ", rangDomination=" + rangDomination
-				+ ", facteurImpetiosite=" + facteurImpetiosite + "]"+super.getNourriture()+super.getGroupeorSolitraire();
+				+ ", facteurImpetiosite=" + facteurImpetiosite + ", nourriture : "+super.getNourriture()+ ", Il vit en : " +super.getGroupeorSolitraire() + " ]";
 	}
 
 

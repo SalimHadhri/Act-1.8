@@ -32,15 +32,17 @@ public abstract class GroupePredateur implements GroupePredateurAction{
 	
 	public  void ajouterPredateur (Prédateur prePrédateur) {	
 		groupePredateur.add(prePrédateur) ;
+		this.taille ++ ;
 	}
 	
 	public void enleverPredateur (Prédateur prePrédateur) {		
 		for (int i = 0; i < groupePredateur.size(); i++) {
-		      if (! groupePredateur.get(i).equals(prePrédateur) )   {
+		      if (groupePredateur.get(i).equals(prePrédateur) )   {
 		    	  groupePredateur.remove(i) ;
 		    	  
 		      }
 		 }	
+		this.taille -- ;
 	}
 
 	public List<Prédateur> getGroupePredateur() {
