@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -98,15 +99,15 @@ public class GroupeLion extends GroupePredateur implements GroupeLionAction  {
 		
 	}
 	
-	public boolean appartient (Lion lion,List<Lion> listLL) {
-		
-		boolean appartient = false ;
-		for(int i = 0 ; i< listLL.size();i++) {
-			if (lion.equals(listLL.get(i))) {
-				appartient =  true ;
+	public List<Lion> declarerLionNonDominant(){
+		List<Lion> lions = new ArrayList<Lion>() ;
+		for (int i = 0; i<listLion.size();i++) {
+			
+			if(((Lion)listLion.get(i)).getFacteurDomination().equals(FacteurDomination.nonDominant)) {
+				lions.add((Lion)listLion.get(i));
 			}
 		}
-		return appartient ;
+		return lions ;
 	}
 	
 	public void setLionNonDominant () {

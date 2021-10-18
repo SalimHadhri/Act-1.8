@@ -10,5 +10,7 @@ public interface GroupeLionAction {
 	public void construireCoupleDominant(Lion male) ;
 	public void setLionNonDominant () ;
 	public void afficherCouple () ;
+	public List<Lion> declarerLionNonDominant() ;
+	
 	
 }
