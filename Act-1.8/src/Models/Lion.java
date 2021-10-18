@@ -4,13 +4,13 @@ import Models.Prédateur.Categorie;
 import Models.Prédateur.GroupeorSolitraire;
 import Models.Prédateur.Nourriture;
 
-public class Lion   extends Prédateur implements LionAction{
+public class Lion extends Prédateur implements LionAction{
 	
 	private FacteurDomination facteurDomination ;
 	private RangDomination rangDomination ;
 	private int facteurImpetiosite ;		
 	public enum FacteurDomination {dominant ,nonDominant };	
-	public enum RangDomination {APLHA ,BETA ,GAMA ,OMEGA}		;
+	public enum RangDomination {APLHA ,BETA ,GAMA ,OMEGA};
 
 	public Lion() {
 		super() ;
@@ -21,7 +21,7 @@ public class Lion   extends Prédateur implements LionAction{
 		this.facteurDomination = facteurDomination;
 	}
 
-	public Lion(FacteurDomination facteurDomination, RangDomination rangDomination, int facteurImpetiosite,String sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,Nourriture nourriture) {
+	public Lion(FacteurDomination facteurDomination, RangDomination rangDomination, int facteurImpetiosite,Sexe sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,Nourriture nourriture) {
 		super( sexe,  categorie,  force,  groupeorSolitraire,nourriture);			 
 		this.facteurDomination = facteurDomination;
 		this.rangDomination = rangDomination;
@@ -99,15 +99,7 @@ public class Lion   extends Prédateur implements LionAction{
 		// TODO Auto-generated method stub	
 	}
 
-	@Override
-	public void ajouterPredateur(Prédateur prePrédateur) {
-		// TODO Auto-generated method stub	
-	}
 
-	@Override
-	public void enleverPredateur(Prédateur prePrédateur) {
-		// TODO Auto-generated method stub	
-	}
 
 	public FacteurDomination getFacteurDomination() {
 		return facteurDomination;

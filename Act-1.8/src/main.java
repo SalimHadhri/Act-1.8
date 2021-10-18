@@ -11,12 +11,13 @@ import Models.Prédateur;
 import Models.Prédateur.Categorie;
 import Models.Prédateur.GroupeorSolitraire;
 import Models.Prédateur.Nourriture;
+import Models.Prédateur.Sexe;
 
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub		
-		Lion lion11 = new Lion(FacteurDomination.dominant, RangDomination.APLHA, 1,"masculin", Categorie.jeune , 5, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion11 = new Lion(FacteurDomination.dominant, RangDomination.APLHA, 1,Sexe.male, Categorie.jeune , 5, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
 		lion11.seNourrir(); 
 		lion11.chasser();
 		System.out.println("******************Son son va ====>***************");
@@ -26,23 +27,25 @@ public class main {
 			
 		/***********************************************************************************************************************/
 		
-		Lion lion12 = new Lion(FacteurDomination.nonDominant, RangDomination.BETA, 2,"masculin", Categorie.jeune , 2, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
-		Lion lion13 = new Lion(FacteurDomination.dominant, RangDomination.GAMA, 3,"masculin", Categorie.vieux , 3, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
-		Lion lion14 = new Lion(FacteurDomination.nonDominant, RangDomination.APLHA, 4,"masculin", Categorie.jeune , 4, GroupeorSolitraire.groupe ,Nourriture.omnivore) ;
-		Lion lion15 = new Lion(FacteurDomination.dominant, RangDomination.OMEGA, 5,"masculin", Categorie.jeune , 5, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
-		Lion lion16 = new Lion(FacteurDomination.nonDominant, RangDomination.APLHA, 6,"masculin", Categorie.vieux , 6, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
-		Lion lion17 = new Lion(FacteurDomination.dominant, RangDomination.OMEGA, 7,"masculin", Categorie.jeune , 7, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
-		Lion lion18 = new Lion(FacteurDomination.dominant, RangDomination.BETA, 8,"feminin", Categorie.jeune , 8, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
-
+		Prédateur lion12 = new Lion(FacteurDomination.nonDominant, RangDomination.BETA, 2,Sexe.male, Categorie.jeune , 2, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion13 = new Lion(FacteurDomination.dominant, RangDomination.GAMA, 3,Sexe.male, Categorie.vieux , 3, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion14 = new Lion(FacteurDomination.nonDominant, RangDomination.APLHA, 4,Sexe.male, Categorie.jeune , 4, GroupeorSolitraire.groupe ,Nourriture.omnivore) ;
+		Prédateur lion15 = new Lion(FacteurDomination.dominant, RangDomination.OMEGA, 5,Sexe.femelle, Categorie.jeune , 5, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion16 = new Lion(FacteurDomination.nonDominant, RangDomination.APLHA, 6,Sexe.male, Categorie.vieux , 6, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion17 = new Lion(FacteurDomination.dominant, RangDomination.OMEGA, 7,Sexe.male, Categorie.jeune , 7, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion18 = new Lion(FacteurDomination.dominant, RangDomination.BETA, 8,Sexe.femelle, Categorie.jeune , 8, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion19 = new Lion(FacteurDomination.nonDominant, RangDomination.BETA, 9,Sexe.femelle, Categorie.jeune , 9, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion20 = new Lion(FacteurDomination.dominant, RangDomination.BETA, 10,Sexe.male, Categorie.jeune , 10, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
+		Prédateur lion21 = new Lion(FacteurDomination.dominant, RangDomination.GAMA, 11,Sexe.male, Categorie.jeune , 11, GroupeorSolitraire.solitaire ,Nourriture.omnivore) ;
 		/***********************************************************************************************************************/
 		
-		List<Lion> lions = new ArrayList<Lion>() ;
+		List<Prédateur> lions = new ArrayList<Prédateur>() ;
 		lions.add(lion12) ;
-		lions.add(lion14) ;
-		lions.add(lion15) ;
 		
 		List<Prédateur> lions1 = new ArrayList<Prédateur>() ;
 		lions1.add(lion11) ;
+		lions1.add(lion14) ;
+		lions1.add(lion15) ;
 		
 		List<Prédateur> lions2 = new ArrayList<Prédateur>() ;
 		lions2.add(lion13) ;
@@ -64,42 +67,76 @@ public class main {
 		lions5.add(lion14) ;
 		lions5.add(lion15) ;
 		
-		List<Lion> lions6 = new ArrayList<Lion>() ;
+		List<Prédateur> lions6 = new ArrayList<Prédateur>() ;
 		lions6.add(lion12) ;
 		lions6.add(lion14) ;
 		lions6.add(lion15) ;
 		
 		
-		List<Lion> lions7 = new ArrayList<Lion>() ;
+		List<Prédateur> lions7 = new ArrayList<Prédateur>() ;
 		lions7.add(lion12) ;
 		
-	
-		FacteurDomination[] couple1 = {FacteurDomination.dominant,FacteurDomination.nonDominant};
-		FacteurDomination[] couple2= {FacteurDomination.nonDominant,FacteurDomination.nonDominant};
-		FacteurDomination[] couple3= {FacteurDomination.dominant,FacteurDomination.dominant};
+		Lion[] couple1Dominant = new Lion[2] ;
 		
-		GroupeLion pre1 = new GroupeLion(lions, 6,couple1,lions1, 2,"AFRIQUE") ;
-		GroupeLion pre2 = new GroupeLion(lions7, 6,couple1,lions2, 2,"EUROPE") ;
+		couple1Dominant[0] = (Lion) lion13 ;
+		couple1Dominant[1] = (Lion) lion18 ;
+			
+		Lion[] couple2Dominant = new Lion[2] ;
 		
-		System.out.println("********************les deux groupes de prédateurs sont :*****************") ;
-		pre1.afficherCaracteritiques();
-		pre2.afficherCaracteritiques();
+		couple2Dominant[0] = (Lion) lion17 ;
+		couple2Dominant[1] = (Lion) lion15 ;
+				
+		GroupeLion pre1 = new GroupeLion(lions, 6,couple1Dominant,2,"AFRIQUE") ;
+		GroupeLion pre2 = new GroupeLion(lions7, 9,couple2Dominant,2,"EUROPE") ;
 		
 		
-		System.out.println("***************Ajout de deux predateurs dans la premiere liste:*************") ;
-		pre1.ajouterPredateur(lion16);
-		pre1.ajouterPredateur(lion17);
-		pre1.afficherCaracteritiques() ;
-		
-		System.out.println("***************Supression d'un predateur : **************") ;
-		pre1.enleverPredateur(lion14);
-		pre1.afficherCaracteritiques() ;
-		
-		System.out.println("***************Et les 3 prédateurs, en l'occurence des lions, sont: **************") ;
+		System.out.println("********************premier groupe de prédateur de prédateurs qui sont des lions sont :*****************") ;
 		pre1.afficherCaracteristiquesPredateurs();
+		System.out.println("********************deuxiemme groupe de predateur*****************");
+		pre2.afficherCaracteristiquesPredateurs();
+		System.out.println("***************Ajout de deux predateurs dans le premier groupe:*************") ;
+		pre1.ajouterPredateur(lion17);
+		pre1.ajouterPredateur(lion19);
+		pre1.afficherCaracteristiquesPredateurs();	
+		System.out.println("******************** changons de couple pour le premier groupe de prédateurs*****************") ;
+		Lion[] ancienCouple = (Lion[]) pre1.getCoupleLionDominant() ;
+		pre1.construireCoupleDominant((Lion) lion17) ;
 		
+		if (pre1.getCoupleLionDominant()==ancienCouple) {
+			System.out.println("PAs de nouveau couple dominant");
+		}
+		else {
+			pre1.afficherCouple ();	
+		}
 		
+		System.out.println("***************changons encore de couple:*************") ;
+		Prédateur[] ancienCouple2 = pre1.getCoupleLionDominant() ;
+		pre1.construireCoupleDominant((Lion) lion21) ;
+		if (pre1.getCoupleLionDominant()==ancienCouple2) {
+			System.out.println("PAs de nouveau couple dominant");
+		}
+		else {
+			pre1.afficherCouple ();	
+		}
+
+		System.out.println("******************** Y a t'il un nouveau couple ?:*****************") ;
+
+		Lion[] ancienCouple4 = (Lion[]) pre1.getCoupleLionDominant() ;
+		pre1.construireCoupleDominant((Lion) lion13) ;
+		
+		if (pre1.getCoupleLionDominant()==ancienCouple4) {
+			System.out.println("PAs de nouveau couple dominant");
+		}
+		else {
+			pre1.afficherCouple () ;
+		}
+		
+		System.out.println("***************Supression d'un predateur de ce groupre de predateur===> et ils en restent 2 : **************") ;
+
+		pre1.enleverPredateur(lion19);
+		pre1.afficherCaracteristiquesPredateurs();	
 		
 	}
-
 }
+
+

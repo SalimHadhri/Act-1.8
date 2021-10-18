@@ -16,7 +16,7 @@ public class Ours  extends Prédateur implements OursAction {
 		super() ;
 	}
 
-	public Ours(int facteurAgressivite, float puissance, StatutHivernation statutHivernation,String sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,Nourriture nourriture) {
+	public Ours(int facteurAgressivite, float puissance, StatutHivernation statutHivernation,Sexe sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,Nourriture nourriture) {
 		super( sexe,  categorie,  force,  groupeorSolitraire,nourriture);
 		this.facteurAgressivite = facteurAgressivite;
 		this.puissance = puissance;
@@ -97,15 +97,7 @@ public class Ours  extends Prédateur implements OursAction {
 		// TODO Auto-generated method stub	
 	}
 
-	@Override
-	public void ajouterPredateur(Prédateur prePrédateur) {
-		// TODO Auto-generated method stub	
-	}
 
-	@Override
-	public void enleverPredateur(Prédateur prePrédateur) {
-		// TODO Auto-generated method stub	
-	}
 	
 	public int getFacteurAgressivite() {
 		return facteurAgressivite;

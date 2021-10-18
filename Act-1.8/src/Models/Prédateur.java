@@ -3,7 +3,7 @@ import Interfaces.GroupePredateurAction;
 
 public abstract class Prédateur implements GroupePredateurAction {
 	
-	private String sexe ;
+	private Sexe sexe ;
 	private  Categorie categorie;
 	private int force ;
 	private GroupeorSolitraire groupeorSolitraire;
@@ -11,11 +11,12 @@ public abstract class Prédateur implements GroupePredateurAction {
 	public enum GroupeorSolitraire {groupe ,solitaire };
 	public enum Nourriture {viande,omnivore};
 	public enum Categorie {jeune , adulte, vieux };	
+	public enum Sexe {male , femelle};	
 	
 	public Prédateur() {
 	}
 	
-	public Prédateur(String sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,Nourriture nourriture) {
+	public Prédateur(Sexe sexe, Categorie categorie, int force, GroupeorSolitraire groupeorSolitraire,Nourriture nourriture) {
 		this.sexe = sexe;
 		this.categorie = categorie;
 		this.force = force;
@@ -45,10 +46,10 @@ public abstract class Prédateur implements GroupePredateurAction {
 		this.groupeorSolitraire = groupeorSolitraire;
 	}
 
-	public String getSexe() {
+	public Sexe getSexe() {
 		return sexe;
 	}
-	public void setSexe(String sexe) {
+	public void setSexe(Sexe sexe) {
 		this.sexe = sexe;
 	}
 
