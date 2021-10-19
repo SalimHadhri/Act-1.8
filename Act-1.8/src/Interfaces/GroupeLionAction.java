@@ -11,6 +11,6 @@ public interface GroupeLionAction {
 	public void setLionNonDominant () ;
 	public void afficherCouple () ;
 	public List<Lion> declarerLionNonDominant() ;
-	
+	public List<Lion>  reproduireDesLions(int nbrLion) ;
 	
 }
